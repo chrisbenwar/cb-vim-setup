@@ -6,5 +6,5 @@ set shiftwidth=2
 set expandtab
 
 if has("gui_running")
-  set guifont=Liberation\ Mono\ 11
+  set guifont=Droid\ Sans\ Mono\ 13
 endif

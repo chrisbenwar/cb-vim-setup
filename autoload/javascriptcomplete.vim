@@ -519,10 +519,10 @@ function! javascriptcomplete#CompleteJS(findstart, base)
 		elseif object_type == 'Math'
 			let values = maths
 
-		elseif object_type =~ '$'
-			let values = jQuery
-		elseif object_type =~ 'jQuery'
-			let values = jQuery
+      "elseif object_type =~ '$'
+      "let values = jQuery
+      "elseif object_type =~ 'jQuery'
+      "let values = jQuery
 		endif
 
 		if !exists('values')
