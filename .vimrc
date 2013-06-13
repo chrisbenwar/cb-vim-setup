@@ -4,7 +4,8 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set linespace=4
 
 if has("gui_running")
-  set guifont=Droid\ Sans\ Mono\ 13
+  set guifont=Liberation\ Mono\ 11
 endif
