@@ -9,3 +9,10 @@ set linespace=4
 if has("gui_running")
   set guifont=Liberation\ Mono\ 11
 endif
+
+
+if !exists("g:UltiSnipsSnippetDirectories")
+    let g:UltiSnipsSnippetDirectories = [ "UltiSnips", "mysnippets" ]
+endif
+
+set number
