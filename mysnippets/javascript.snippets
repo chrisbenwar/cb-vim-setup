@@ -1,4 +1,89 @@
-snippet toasty "js module function" 
+snippet copyPaste "CopyPasteMe"
+endsnippet
+
+snippet vecc "vector create"
+vec.create();
+endsnippet
+
+snippet vecs "vector toString"
+vec.toString(${VISUAL}$0)
+endsnippet
+
+snippet json "json stringify"
+JSON.stringify(${1})
+endsnippet
+
+snippet testok "qunit test ok"
+ok(${1:test}, "${2:description}: " +
+	JSON.stringify(${3}));
+endsnippet
+
+snippet test "qunit test"
+test('${1}', function() {
+	${VISUAL}$0
+}); 
+endsnippet
+
+snippet v "vec param"
+@param v A vector.
+endsnippet
+
+snippet commr "jdoc return"
+@returns ${1:desc}
+endsnippet
+
+snippet commp "jdoc param"
+@param ${1:param} ${2:desc}
+endsnippet
+
+snippet comm "jdoc Comment block"
+/**
+ * ${VISUAL}$0
+ */
+endsnippet
+
+snippet for "basic for loop"
+for(var i = 0; i < ${1:num}; i++)
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet gebid "get elem"
+var ${1:varname} = document.getElementById(${2:id});
+endsnippet
+
+snippet obj "object"
+var ${1} = {
+	${VISUAL}$0
+};
+endsnippet
+
+snippet for "basic for loop"
+for(var i = 0; i < ${1:num}; i++)
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet gebid "get elem"
+var ${1:varname} = document.getElementById(${2:id});
+endsnippet
+
+snippet obj "object"
+var ${1} = {
+	${VISUAL}$0
+};
+endsnippet
+
+snippet of "object function"
+${4:funcName}: function(${5:param})
+{
+	${VISUAL}$0
+}${6:comma?}
+endsnippet
+
+snippet module "js module function" 
 'use strict';
 var ${1} = ${2} || {};
 
@@ -6,3 +91,4 @@ var ${1} = ${2} || {};
 	${VISUAL}$0
 })(${4});
 endsnippet
+
