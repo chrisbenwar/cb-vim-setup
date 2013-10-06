@@ -1,3 +1,4 @@
+cd /home/chris/dev/web/angularsports
 autocmd VimEnter * NERDTree
 colorscheme github
 :set guioptions-=T

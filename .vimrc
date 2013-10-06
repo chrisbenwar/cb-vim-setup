@@ -7,7 +7,7 @@ set noexpandtab
 set linespace=4
 
 if has("gui_running")
-  set guifont=Liberation\ Mono\ 10
+  set guifont=Source\ Code\ Pro\ Medium\ 11
 endif
 
 

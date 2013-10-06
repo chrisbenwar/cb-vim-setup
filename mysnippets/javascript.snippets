@@ -1,6 +1,51 @@
 snippet copyPaste "CopyPasteMe"
 endsnippet
 
+snippet une "Underscore loop"
+_.each(${1:var}, function(v, k) {
+	${VISUAL}$0
+});
+endsnippet
+
+snippet mye "my each player"
+my.each(function(player, i) {
+	${VISUAL}$0
+});
+endsnippet
+
+snippet vf "False variable"
+var ${1} = false;
+endsnippet
+
+snippet vt "True variable"
+var ${1} = true;
+endsnippet
+
+snippet v0 "0 variable"
+var ${1} = 0;
+endsnippet
+
+snippet vn "null variable"
+var ${1} = null;
+endsnippet
+
+snippet modt "js module function" 
+'use strict';
+var cbTennis = cbTennis || {};
+
+(function(t) {
+	${VISUAL}$0
+})(cbTennis);
+endsnippet
+
+snippet r "return"
+return ${1};
+endsnippet
+
+snippet log "log to console"
+console.log(JSON.stringify([${1}]));
+endsnippet
+
 snippet vecc "vector create"
 vec.create();
 endsnippet
@@ -42,10 +87,28 @@ snippet comm "jdoc Comment block"
  */
 endsnippet
 
-snippet for "basic for loop"
-for(var i = 0; i < ${1:num}; i++)
+snippet fv "basic for loop"
+for(var ${1} = 0; $1 < ${2:num}; $1++)
 {
 	${VISUAL}$0
+}
+endsnippet
+
+snippet iv "basic if"
+if(${1})
+{
+	${2}
+}
+endsnippet
+
+snippet iev "basic if"
+if(${1})
+{
+	${2}
+}
+else
+{
+	${3}	
 }
 endsnippet
 
@@ -57,13 +120,6 @@ snippet obj "object"
 var ${1} = {
 	${VISUAL}$0
 };
-endsnippet
-
-snippet for "basic for loop"
-for(var i = 0; i < ${1:num}; i++)
-{
-	${VISUAL}$0
-}
 endsnippet
 
 snippet gebid "get elem"
