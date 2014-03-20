@@ -19,3 +19,10 @@ imap zv <ESC>
 
 set number
 set backupcopy=yes
+set hidden
+
+map <F8> :w<CR>:!python %<CR>
+imap <F8> <Esc>:w<CR>:!python %<CR>
+
+map <F7> :w<CR>:!ruby %<CR>
+imap <F7> <Esc>:w<CR>:!ruby %<CR>

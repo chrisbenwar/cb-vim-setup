@@ -1,7 +1,49 @@
 snippet copyPaste "CopyPasteMe"
 endsnippet
 
-snippet une "Underscore loop"
+snippet sup "closure suppress dup"
+/** @suppress {duplicate} */
+endsnippet
+
+snippet vdef "Default param"
+${1:varName} = $1 || ${2:default};
+endsnippet
+
+snippet vsq "Squared variable"
+var ${1:varName}Sqrd = $1 * $1;
+endsnippet
+
+snippet fblog "Log using futility belt logger"
+futilitybelt.dev.logger.log([${1}], '${2:force}');
+endsnippet
+
+snippet uso "Underscore some"
+_.some(${1:array}, function(v) { 
+	return $2; 
+});
+endsnippet
+
+snippet uma "Underscore map"
+_.map(${1:array}, function(v) { 
+	return $2; 
+});
+endsnippet
+
+snippet ufi "Underscore filter"
+_.filter(${1:array}, function(v) {
+	return {$2};
+});
+endsnippet
+
+snippet uco "Underscore contains"
+_.contains(${1:array}, ${2:val})
+endsnippet
+
+snippet uin "Underscore inArray"
+_.inArray(${1:array}, ${2:val})
+endsnippet
+
+snippet uea "Underscore loop"
 _.each(${1:var}, function(v, k) {
 	${VISUAL}$0
 });
@@ -25,8 +67,24 @@ snippet v0 "0 variable"
 var ${1} = 0;
 endsnippet
 
+snippet v02 "0 variable"
+var ${1} = 0, ${2} = 0;
+endsnippet
+
+snippet v03 "0 variable"
+var ${1} = 0, ${2} = 0, ${3} = 0;
+endsnippet
+
 snippet vn "null variable"
 var ${1} = null;
+endsnippet
+
+snippet vn2 "null variable 2"
+var ${1} = null, ${2} = null;
+endsnippet
+
+snippet vn3 "null variable 3"
+var ${1} = null, ${2} = null, ${3} = null;
 endsnippet
 
 snippet modt "js module function" 
@@ -47,11 +105,19 @@ console.log(JSON.stringify([${1}]));
 endsnippet
 
 snippet vecc "vector create"
-vec.create();
+vec.create(${1})
 endsnippet
 
 snippet vecs "vector toString"
-vec.toString(${VISUAL}$0)
+vec.toString(${1})
+endsnippet
+
+snippet vecl "vector length"
+vec.length(${1})
+endsnippet
+
+snippet vecn "vector normal"
+vec.normalize(${1})
 endsnippet
 
 snippet json "json stringify"
@@ -60,7 +126,14 @@ endsnippet
 
 snippet testok "qunit test ok"
 ok(${1:test}, "${2:description}: " +
-	JSON.stringify(${3}));
+	JSON.stringify([${3}]));
+endsnippet
+
+snippet testokm "qunit test ok multiline"
+ok(${1:test}, 
+	"${2:description}: " +
+	JSON.stringify([${3}])
+);
 endsnippet
 
 snippet test "qunit test"
@@ -75,6 +148,10 @@ endsnippet
 
 snippet commr "jdoc return"
 @returns ${1:desc}
+endsnippet
+
+snippet commb ""
+{boolean=} 
 endsnippet
 
 snippet commp "jdoc param"
@@ -101,6 +178,20 @@ if(${1})
 }
 endsnippet
 
+snippet eli "basic else if"
+else if(${1})
+{
+	${2}
+}
+endsnippet
+
+snippet el "basic else"
+else(${1})
+{
+	${2}
+}
+endsnippet
+
 snippet iev "basic if"
 if(${1})
 {
@@ -111,6 +202,8 @@ else
 	${3}	
 }
 endsnippet
+
+
 
 snippet gebid "get elem"
 var ${1:varname} = document.getElementById(${2:id});
